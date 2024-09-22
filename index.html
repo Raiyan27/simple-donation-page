@@ -26,12 +26,23 @@
             </div>
           </div>
     </section>
-    <section id="main" class="container mx-auto">
+    <section id="main" class="container mx-auto mt-24">
         <div id="button-container" class="flex justify-center gap-4">
             <button id="donation-btn">Donation</button>
             <button id="history-btn">History</button>
         </div>
-        <div id="card-container"></div>
+        <div id="card-container">
+            <div class="flex border gap-4 rounded-xl p-8">
+                <div  class="w-2/4" ><img src="./assets/noakhali.png" alt=""></div>
+                <div class="w-2/4">
+                    <button class="flex items-center"><img src="./assets/coin.png" alt="">0 BDT</button>
+                    <h1>Donate for Flood at Noakhali, Bangladesh</h1>
+                    <p> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+                    <input type="number" placeholder="Write Donation Amount" min="0"><br>
+                    <button class="w-full bg-[#B4F461] rounded-lg text-xl mt-2 py-2">Donate Now</button>
+                </div>
+            </div>
+        </div>
     </section>
     <script src="./scripts.js"></script>
 </body>
