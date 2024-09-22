@@ -7,8 +7,6 @@
     font-style: normal;
   }
 
-  :root {
-    --green-primary: #3490dc;
-    --secondary-color: #ff6347;
-    --custom-padding: 16px;
-  }
+.bg-primary-green{
+    background-color: #B4F461;
+}
