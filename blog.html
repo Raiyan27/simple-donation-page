@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="lexend">
     <section id="nav-bar-section" class="sticky top-0">
         <div class="navbar bg-[#F9F7F3] py-4 px-4 lg:px-16">
             <div class="navbar-start">
@@ -17,7 +17,7 @@
             <div class="navbar-center">
               <div class="flex justify-center items-center gap-2 font">
                 <img src="./assets/logo.png" alt="">
-                <a href="" class="text-xl">Donate Bangladesh</a>
+                <a href="" class="text-xl md:flex hidden">Donate Bangladesh</a>
               </div>
             </div>
             <div class="navbar-end">
@@ -27,50 +27,46 @@
           </div>
         </div>
     </section>
-    <section id="faq">
-        <h1 class="pl-16 pt-16 text-6xl font-bold pb-8">IMPORTANT FAQs</h1>
-        <div class="join join-vertical w-full px-16">
+    <section id="faq" class="mb-16">
+        <h1 class="sm:pl-16 sm:pt-16 text-2xl md:text-6xl font-bold pb-8">IMPORTANT FAQs</h1>
+        <div class="join join-vertical w-full px-4 md:px-16">
             <div class="collapse collapse-arrow join-item border py-8">
               <input type="radio" name="my-accordion-4" checked="checked" />
               <div class="collapse-title text-xl font-medium">What is Document Object Model (DOM)?</div>
               <div class="collapse-content">
-                <p>The Document Object Model (DOM) is a programming interface that represents the structure of an HTML or XML document as a tree of objects. Each element, attribute, and piece of text is represented as a node, allowing developers to manipulate the document's content, structure, and styles using languages like JavaScript. This enables dynamic interaction with web pages.</p>
+                <p class="font-light">The Document Object Model (DOM) is a programming interface that represents the structure of an HTML or XML document as a tree of objects. Each element, attribute, and piece of text is represented as a node, allowing developers to manipulate the document's content, structure, and styles using languages like JavaScript. This enables dynamic interaction with web pages.</p>
               </div>
             </div>
             <div class="collapse collapse-arrow join-item border py-8">
               <input type="radio" name="my-accordion-4" />
               <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
               <div class="collapse-content">
-                <p>You can select an element from the DOM using methods like:</p>
-                <ul>
+                <p class="font-light">You can select an element from the DOM using methods like:</p>
+                <ul class="font-light">
                     <li>document.getElementById('id')</li>
                     <li>document.querySelector('selector')</li>
                     <li>document.getElementsByClassName('class')</li>
                     <li>document.getElementsByTagName('tag')</li>
                 </ul>
-                <p>These methods allow you to access elements based on their ID, CSS selectors, class names, or tag names.</p>
+                <p class="font-light">These methods allow you to access elements based on their ID, CSS selectors, class names, or tag names.</p>
               </div>
             </div>
             <div class="collapse collapse-arrow join-item border py-8">
               <input type="radio" name="my-accordion-4" />
               <div class="collapse-title text-xl font-medium">What is event delegation in the context of DOM, and why is it useful?</div>
               <div class="collapse-content">
-                <p>Event delegation is attaching a single event listener to a parent element to handle events for its child elements. It's useful because it improves performance, handles dynamically added elements automatically, and simplifies code management.</p>
+                <p class="font-light">Event delegation is attaching a single event listener to a parent element to handle events for its child elements. It's useful because it improves performance, handles dynamically added elements automatically, and simplifies code management.</p>
               </div>
             </div>
             <div class="collapse collapse-arrow join-item border py-8">
                 <input type="radio" name="my-accordion-4" />
                 <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
                 <div class="collapse-content">
-                  <p>You can manipulate an element's attributes and styles using methods like element.getAttribute('attrName') to get an attribute, element.setAttribute('attrName', 'value') to set one, and element.removeAttribute('attrName') to remove it. For styles, you can access a style with element.style.property (e.g., element.style.backgroundColor), set a style with element.style.property = 'value' (e.g., element.style.color = 'red'), and remove a style by setting it to an empty string (e.g., element.style.margin = ''). These methods allow you to modify elements dynamically.</p>
+                  <p class="font-light">You can manipulate an element's attributes and styles using methods like element.getAttribute('attrName') to get an attribute, element.setAttribute('attrName', 'value') to set one, and element.removeAttribute('attrName') to remove it. For styles, you can access a style with element.style.property (e.g., element.style.backgroundColor), set a style with element.style.property = 'value' (e.g., element.style.color = 'red'), and remove a style by setting it to an empty string (e.g., element.style.margin = ''). These methods allow you to modify elements dynamically.</p>
                 </div>
               </div>
           </div>
     </section>
-
-
-
-
     <script src="./scripts.js"></script>
 </body>
 </html>

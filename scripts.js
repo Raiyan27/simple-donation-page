@@ -8,8 +8,8 @@ let balance = document.getElementById('balance').innerText;
 balance = parseInt(balance);
 
 function swtichToDonation(){
-    donation.classList.add('bg-[#B4F461]');
-    history.classList.remove('bg-[#B4F461]');
+    donation.classList.add('bg-green-600');
+    history.classList.remove('bg-green-600');
     history.classList.add("bg-[#FFFFFF]");
     donationBox.classList.remove('hidden');
     historyBox.classList.add("hidden");
@@ -17,8 +17,8 @@ function swtichToDonation(){
 }
 
 function swtichToHistory(){
-    donation.classList.remove("bg-[#B4F461]");
-    history.classList.add("bg-[#B4F461]");
+    donation.classList.remove("bg-green-600");
+    history.classList.add("bg-green-600");
     donation.classList.add("bg-[#FFFFFF]");
     donationBox.classList.add('hidden');
     historyBox.classList.remove("hidden");

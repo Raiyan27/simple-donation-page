@@ -17,7 +17,7 @@
             <div class="navbar-center">
               <div class="flex justify-center items-center gap-2 font">
                 <img src="./assets/logo.png" alt="">
-                <a href="" class="text-xl">Donate Bangladesh</a>
+                <a href="" class="text-xl md:flex hidden">Donate Bangladesh</a>
               </div>
             </div>
             <div class="navbar-end">
@@ -25,9 +25,9 @@
               <h3 id="balance">5500BDT</h3>
             </div>
           </div>
-          <div id="button-container" class="flex justify-center gap-8 py-4 bg-[#FFFFFF] opacity-95">
-              <button id="donation-btn" class="btn hover:bg-green-600 text-black border-green-600  w-32 text-xl bg-[#B4F461] border" onclick="swtichToDonation()">Donation</button>
-              <button id="history-btn" class="btn hover:bg-green-600 border-green-600 rounded-lg w-32 text-xl bg-[#FFFFFF] border" onclick="swtichToHistory()">History</button>
+          <div id="button-container" class="flex justify-center md:gap-8 gap-2 py-4 bg-[#FFFFFF] opacity-95">
+              <button id="donation-btn" class="btn hover:bg-green-400 text-black border-green-600  w-32 text-xl bg-green-600 border" onclick="swtichToDonation()">Donation</button>
+              <button id="history-btn" class="btn hover:bg-green-400 text-black border-green-600 rounded-lg w-32 text-xl bg-[#FFFFFF] border" onclick="swtichToHistory()">History</button>
         </div>
         </div>
     </section>
@@ -42,20 +42,20 @@
             <button id="close-modal" class="bg-[#B4F461] text-black px-4 py-2 rounded-lg">Close Information</button>
         </div>
     </div>
-    <section id="donation-box" class="px-16 mx-auto lg:w-3/4">
-        <div class=" flex border gap-8 rounded-xl p-8 justify-center my-8 shadow-lg">
-            <img class="min-h-80 w-2/4" src="./assets/noakhali.png" alt="">
-            <div class="flex flex-col justify-between w-2/4">
+    <section id="donation-box" class="md:px-16 px-4 mx-auto lg:w-3/4">
+        <div class="flex border gap-8 rounded-xl p-8 my-8 shadow-lg flex-col md:flex-row">
+            <img class="min-h-80 md:w-2/4" src="./assets/noakhali.png" alt="">
+            <div class="flex flex-col justify-between md:w-2/4">
                 <div title="funds-raised" class="flex items-center bg-[rgba(244,244,244)] rounded-xl px-3 py-2 max-w-32" ><img src="./assets/coin.png" alt=""><h2 id="noahkhali-funds">500</h2>BDT</div>
                 <h1 class="font-bold text-xl">Donate for Flood at Noakhali, Bangladesh</h1>
                 <p class="font-light"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
-                <input id="noakhaliDonation" class="bg-[#FFFFFF] border py-4 pl-4 rounded-lg w-full" placeholder="Write Donation Amount" required><br>
+                <input id="noakhaliDonation" class="bg-[#FFFFFF] border py-4 pl-4 rounded-lg w-full " placeholder="Write Donation Amount" required><br>
                 <button id="noahkhaliDonation-btn" class="w-full bg-[#B4F461] rounded-lg text-xl mt-2 py-2">Donate Now</button>
             </div>
         </div>
-        <div class=" flex border gap-8 rounded-xl p-8 justify-center my-8 shadow-lg">
-            <img class="min-h-80 w-2/4" src="./assets/feni.png" alt="">
-            <div class="flex flex-col justify-between w-2/4">
+        <div class=" flex border gap-8 rounded-xl p-8 my-8 shadow-lg flex-col md:flex-row">
+            <img class="min-h-80 md:w-2/4" src="./assets/feni.png" alt="">
+            <div class="flex flex-col justify-between md:w-2/4">
                 <div title="funds-raised" class="flex items-center bg-[rgba(244,244,244)] rounded-xl px-3 py-2 max-w-32" ><img src="./assets/coin.png" alt=""><h2 id="feni-funds">500</h2>BDT</div>
                 <h1 class="font-bold text-xl">Donate for Flood Relief in Feni,Bangladesh</h1>
                 <p class="font-light">The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
@@ -63,9 +63,9 @@
                 <button id="feniDonation-btn" class="w-full bg-[#B4F461] rounded-lg text-xl mt-2 py-2">Donate Now</button>
             </div>
         </div>
-        <div class=" flex border gap-8 rounded-xl p-8 justify-center my-8 shadow-lg">
-            <img class="min-h-80 w-2/4" src="./assets/quota-protest.png" alt="">
-            <div class="flex flex-col justify-between w-2/4">
+        <div class=" flex border gap-8 rounded-xl p-8  my-8 shadow-lg flex-col md:flex-row">
+            <img class="min-h-80 md:w-2/4" src="./assets/quota-protest.png" alt="">
+            <div class="flex flex-col justify-between md:w-2/4">
                 <div title="funds-raised" class="flex items-center bg-[rgba(244,244,244)] rounded-xl px-3 py-2 max-w-32" ><img src="./assets/coin.png" alt=""><h2 id="quota-funds">500</h2>BDT</div>
                 <h1 class="font-bold text-xl">Aid for Injured in the Quota Movement</h1>
                 <p class="font-light">The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
@@ -74,8 +74,8 @@
             </div>
         </div>
     </section>
-    <section id="history-box" class="container mx-auto hidden">
-        <div id="no-history-card" class="card p-4 py-32 border text-center text-gray-500 shadow-md rounded-md my-2">
+    <section id="history-box" class="container mx-auto hidden px-4 md:px-16 z-0">
+        <div id="no-history-card" class="card py-32 border text-center text-gray-500 shadow-xl rounded-xl my-2 border ">
             NO DONATION HISTORY
         </div>
     </section>
