@@ -1,17 +1,19 @@
 const donation = document.getElementById("donation-btn");
 const history = document.getElementById('history-btn');
 const donationBox = document.getElementById('donation-box');
+const historyBox = document.getElementById('history-box');
+const footer = document.getElementById('footer');
 
 let balance = document.getElementById('balance').innerText;
 balance = parseInt(balance);
-
-
 
 function swtichToDonation(){
     donation.classList.add('bg-[#B4F461]');
     history.classList.remove('bg-[#B4F461]');
     history.classList.add("bg-[#FFFFFF]");
     donationBox.classList.remove('hidden');
+    historyBox.classList.add("hidden");
+    footer.classList.remove('hidden');
 }
 
 function swtichToHistory(){
@@ -19,6 +21,8 @@ function swtichToHistory(){
     history.classList.add("bg-[#B4F461]");
     donation.classList.add("bg-[#FFFFFF]");
     donationBox.classList.add('hidden');
+    historyBox.classList.remove("hidden");
+    footer.classList.add('hidden');
 }
 
 //modal functions and variables
@@ -37,17 +41,20 @@ closeModalButton.addEventListener('click', function(){
 
 //make donation function
 function makeDonation(amount){
-    if(balance >= amount && amount > 0){
+    if(balance < amount){
+        window.alert("Not Enough Balance!");
+        return false;
+    }
+    else if(amount <= 0 || isNaN(amount)){
+        window.alert("Enter a valid amount!");
+        return false;
+    }
+    else{
         balance -= amount;
         document.getElementById('balance').innerText = balance;
         openBonusModal();
 
         return true;
-    }
-    else{
-        window.alert("Not Enough Balance or Invalid Amount!");
-
-        return false;
     }
 }
 
@@ -59,6 +66,7 @@ document.getElementById('noahkhaliDonation-btn').addEventListener('click', funct
     let isSuccessful = makeDonation(amount);  
 
     if (isSuccessful) {
+        donationHistory(amount, "NoahKhali");
         let funds = document.getElementById('noahkhali-funds').innerText;
         funds = parseInt(funds);  
         document.getElementById('noahkhali-funds').innerText = funds + amount; 
@@ -67,32 +75,34 @@ document.getElementById('noahkhaliDonation-btn').addEventListener('click', funct
 
 
 //feniDonation
-function feniDonation(){
+document.getElementById('feniDonation-btn').addEventListener('click', function(){
     let amount = document.getElementById('feniDonation').value;
     amount = parseInt(amount);
-    console.log(amount);
 
-    let isSuccessful = makeDonation(amount);
-    console.log(isSuccessful);
-    if(isSuccessful){
-        funds = document.getElementById('feni-funds').innerText;
-        document.getElementById('feni-funds').innerText = funds + amount;
+    let isSuccessful = makeDonation(amount);  
+
+    if (isSuccessful) {
+        donationHistory(amount, "Feni");
+        let funds = document.getElementById('feni-funds').innerText;
+        funds = parseInt(funds);  
+        document.getElementById('feni-funds').innerText = funds + amount; 
     }
-}
+});
 
 //QuotaDonation
-function feniDonation(){
+document.getElementById('quotaDonation-btn').addEventListener('click', function(){
     let amount = document.getElementById('quotaDonation').value;
     amount = parseInt(amount);
-    console.log(typeof amount);
-    console.log(amount);
 
-    let isSuccessful = makeDonation(amount);
-    if(isSuccessful){
-        funds = document.getElementById('quota-funds').innerText;
-        document.getElementById('quota-funds').innerText = funds + amount;
+    let isSuccessful = makeDonation(amount);  
+
+    if (isSuccessful) {
+        donationHistory(amount, "Quota");
+        let funds = document.getElementById('quota-funds').innerText;
+        funds = parseInt(funds);  
+        document.getElementById('quota-funds').innerText = funds + amount; 
     }
-}
+});
 
 // files connection
 document.getElementById('blog-btn').addEventListener('click', function(){
@@ -102,3 +112,51 @@ document.getElementById('blog-btn').addEventListener('click', function(){
 function home(){
     window.location.href = './index.html'; 
 };
+
+//history box
+function getDate() {
+    const date = new Date();
+    return date.toString(); 
+}
+
+function donationHistory(amount, donationType) {
+    const container = document.getElementById('history-box');
+
+    const noHistoryCard = document.getElementById('no-history-card');
+    if (noHistoryCard) {
+        container.removeChild(noHistoryCard); 
+    }
+
+    const currentDate = getDate();
+
+    const card = document.createElement('div');
+    card.className = 'card p-4 bg-white shadow-md rounded-md my-2 border';
+
+    const title = document.createElement('h1');
+    title.className = 'text-xl font-bold mb-2';
+    if(donationType === 'NoahKhali'){
+        title.innerText = amount + " Taka is donated for flood relief in Noahkhali";
+    }
+    else if(donationType === 'Feni'){
+        title.innerText = amount + " Taka is donated for famine-2024 at Feni";
+    }
+    else{
+        title.innerText = amount + " Taka is donated for Aid to Injured in the Quota Movement Bangladesh";
+    }
+
+    const dateTime = document.createElement('p');
+    dateTime.className = 'text-sm text-gray-500';
+    dateTime.textContent = "Date: " + currentDate;
+
+    card.appendChild(title);
+    card.appendChild(dateTime);
+
+    container.appendChild(card);
+}
+
+
+
+
+
+
+
