@@ -17,7 +17,7 @@ function swtichToDonation(){
 }
 
 function swtichToHistory(){
-    donation.classList.remove("bg-green-400");
+    donation.classList.remove("bg-green-600");
     history.classList.add("bg-green-600");
     donation.classList.add("bg-[#FFFFFF]");
     donationBox.classList.add('hidden');
